@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ec7385b-f0af-4b64-886b-763d6aa9652c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/wordcount_with_exception.rb" beforeDir="false" afterPath="$PROJECT_DIR$/wordcount_with_exception.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pt2_ch9_DefineOperator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pt2_ch9_DefineOperator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pt2_ch9_DefineOperator/handle_err.rb" beforeDir="false" />
-    </list>
+    <list default="true" id="4ec7385b-f0af-4b64-886b-763d6aa9652c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="-35" />
     <option name="width" value="1750" />
@@ -77,6 +73,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,15 +150,15 @@
       <option name="presentableId" value="Default" />
       <updated>1558250158191</updated>
       <workItem from="1558250159272" duration="2402000" />
-      <workItem from="1560048451910" duration="181000" />
+      <workItem from="1560048451910" duration="1381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2583000" />
+    <option name="totallyTimeSpent" value="3783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
