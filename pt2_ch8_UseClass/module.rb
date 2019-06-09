@@ -10,6 +10,10 @@ end
 p HelloModule::Version
 HelloModule.hello('yae sakura')
 
+include HelloModule
+p Version
+hello('yae sakura')
+
 # mix-in
 module Meth
   # shall not contain constants
@@ -24,3 +28,7 @@ end
 
 c = C.new
 c.meth()
+
+include Meth
+meth
+
