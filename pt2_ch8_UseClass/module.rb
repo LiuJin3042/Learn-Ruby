@@ -1,11 +1,9 @@
 # encoding:GBK
 module HelloModule
   Version = 1.0
-
   def hello(name)
     p "hello #{name}"
   end
-
   module_function :hello
 end
 
@@ -19,6 +17,7 @@ module Meth
     p 'faq'
   end
 end
+
 class C
   include Meth
 end

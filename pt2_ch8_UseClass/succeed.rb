@@ -1,3 +1,4 @@
+# encoding:gbk
 class C1
   def hello
     p 'hello'
