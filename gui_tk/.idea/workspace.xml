@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ruby_calc.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+            <state relative-caret-position="191">
+              <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -224,12 +224,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560651556214</updated>
       <workItem from="1560651557300" duration="2103000" />
-      <workItem from="1562234938360" duration="12026000" />
+      <workItem from="1562234938360" duration="12269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14129000" />
+    <option name="totallyTimeSpent" value="14372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="762" y="0" width="781" height="830" extended-state="0" />
@@ -263,7 +263,7 @@
     <SUITE FILE_PATH="coverage/gui_tk@call_calc.rcov" NAME="call_calc Coverage Results" MODIFIED="1560653676943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
     <SUITE FILE_PATH="coverage/gui_tk@test.rcov" NAME="test Coverage Results" MODIFIED="1562246432494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
     <SUITE FILE_PATH="coverage/gui_tk@TkHelloWorld.rcov" NAME="TkHelloWorld Coverage Results" MODIFIED="1560652099548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
-    <SUITE FILE_PATH="coverage/gui_tk@ruby_calc.rcov" NAME="ruby_calc Coverage Results" MODIFIED="1562249406045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
+    <SUITE FILE_PATH="coverage/gui_tk@ruby_calc.rcov" NAME="ruby_calc Coverage Results" MODIFIED="1562249748942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/use_tk.rb">
@@ -299,8 +299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ruby_calc.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+        <state relative-caret-position="191">
+          <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
         </state>
       </provider>
     </entry>
