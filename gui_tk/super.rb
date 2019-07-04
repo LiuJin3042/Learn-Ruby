@@ -1,8 +1,16 @@
-#encoding:GBK
+# encoding:GBK
+# A calculator with gui
+# Author: LiuJin
+# School Number: 10173042
+# 2019-7-4
+
 require 'tk'
-require 'tk'
-msg="¼ÆËãÆ÷"
-root=TkRoot.new{title msg}
+
+# write title
+msg="CALCULATOR"
+root=TkRoot.new do
+	title msg
+end
 var=TkVariable.new
 a=0
 b=0
