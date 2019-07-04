@@ -9,6 +9,46 @@ require 'tk'
 # write title
 msg = "CALCULATOR"
 root = TkRoot.new { title msg }
+
+# store all commands
+commands = ''
+
+# store present input, such as numbers
+tmp_input = ''
+
+# store histories
+history = []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var = TkVariable.new
 a = 0
 b = 0
@@ -78,26 +118,26 @@ TkButton.new(root){
 text ' = '
 place:'height'=>60,'width'=>120,'x'=>120,'y'=>210
     command{
-	
+
     if(i == 0)
 	c = a
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a+b
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a-b
 	    end
 	if(i == 3)
-		 
+
 			  c = a*b
-		
+
 		end
-	if(i == 4)  
-		if(b! = 0) 
+	if(i == 4)
+		if(b! = 0)
 		   c = (a.to_f)/b
-		  
-		   elsif 
+
+		   elsif
 			c = "ERROR"
 			end
 		end
@@ -140,17 +180,17 @@ place:'height'=>60,:'width'=>60,:'x'=>0,:'y'=>30
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -169,17 +209,17 @@ place:'height'=>60,:'width'=>60,:'x'=>60,:'y'=>30
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -198,17 +238,17 @@ place:'height'=>60,:'width'=>60,:'x'=>120,:'y'=>30
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -227,17 +267,17 @@ place:'height'=>60,:'width'=>60,:'x'=>0,:'y'=>90
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -256,17 +296,17 @@ place:'height'=>60,:'width'=>60,:'x'=>60,:'y'=>90
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -285,17 +325,17 @@ place:'height'=>60,:'width'=>60,:'x'=>120,:'y'=>90
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -314,17 +354,17 @@ place:'height'=>60,:'width'=>60,:'x'=>0,:'y'=>150
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
@@ -343,17 +383,17 @@ place:'height'=>60,:'width'=>60,:'x'=>60,:'y'=>150
    if(i == 0)
 	   c = a.to_s
 	end
-    if(i == 1) 
+    if(i == 1)
 	    c = a.to_s+"+"+b.to_s
 	    end
-    if(i == 2) 
+    if(i == 2)
 	       c = a.to_s+"-"+b.to_s
 	    end
 	if(i == 3)
 		   c = a.to_s+"*"+b.to_s
 		end
-	if(i == 4) 
-		   c = a.to_s+"/"+b.to_s 
+	if(i == 4)
+		   c = a.to_s+"/"+b.to_s
 	   end
 	   text c
     place:'height'=>30,:'width'=>300,:'x'=>0,:'y'=>0
