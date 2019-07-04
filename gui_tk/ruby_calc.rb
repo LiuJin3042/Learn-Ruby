@@ -62,21 +62,7 @@ tmp_label.configure('text'=>$tmp_input)
 
 # valuate commandso
 valuate = "
-begin
-ans = eval($commands).to_s
-$commands = ''
-$tmp_input = ''
-# clear cmd label while saving the commands value to be
-# called next time
-cmd_label.configure('text'=>'')
-tmp_label.configure('text'=>ans)
-rescue => ex
-$commands = ''
-$tmp_input = ''
-msg = ex.message
-cmd_label.configure('text'=>'')
-tmp_label.configure('text'=>msg)
-end
+
 "
 
 TkButton.new(root){
@@ -102,7 +88,21 @@ TkButton.new(root) do
   text get_ans
   pack :side=>'top', :fill=>'both'
   command{
-    eval(valuate)
-  }
+    begin
+      ans = eval($commands).to_s
+      $commands = ''
+      $tmp_input = ''
+      # clear cmd label while saving the commands value to be
+      # called next time
+      cmd_label.configure('text'=>'')
+      tmp_label.configure('text'=>ans)
+    rescue => ex
+      $commands = ''
+      $tmp_input = ''
+      msg = ex.message
+      cmd_label.configure('text'=>'')
+      tmp_label.configure('text'=>msg)
+    end
+    }
 end
 Tk.mainloop
