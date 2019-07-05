@@ -42,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/super.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5719">
+            <state relative-caret-position="5776">
               <caret line="304" selection-start-line="304" selection-end-line="304" />
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ruby_calc.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+            <state relative-caret-position="209">
+              <caret line="173" column="21" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -102,9 +102,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -224,23 +224,24 @@
       <option name="presentableId" value="Default" />
       <updated>1560651556214</updated>
       <workItem from="1560651557300" duration="2103000" />
-      <workItem from="1562234938360" duration="12269000" />
+      <workItem from="1562234938360" duration="13023000" />
+      <workItem from="1562337289898" duration="1818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14372000" />
+    <option name="totallyTimeSpent" value="16944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="761" y="0" width="782" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27524206" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28314918" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32808024" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32761088" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -263,7 +264,7 @@
     <SUITE FILE_PATH="coverage/gui_tk@call_calc.rcov" NAME="call_calc Coverage Results" MODIFIED="1560653676943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
     <SUITE FILE_PATH="coverage/gui_tk@test.rcov" NAME="test Coverage Results" MODIFIED="1562246432494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
     <SUITE FILE_PATH="coverage/gui_tk@TkHelloWorld.rcov" NAME="TkHelloWorld Coverage Results" MODIFIED="1560652099548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
-    <SUITE FILE_PATH="coverage/gui_tk@ruby_calc.rcov" NAME="ruby_calc Coverage Results" MODIFIED="1562249748942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
+    <SUITE FILE_PATH="coverage/gui_tk@ruby_calc.rcov" NAME="ruby_calc Coverage Results" MODIFIED="1562339130050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/use_tk.rb">
@@ -285,7 +286,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/super.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5719">
+        <state relative-caret-position="5776">
           <caret line="304" selection-start-line="304" selection-end-line="304" />
         </state>
       </provider>
@@ -297,10 +298,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Bitnami/rubystack-2.4.6-5/ruby/lib/ruby/gems/2.4.0/gems/tk-0.2.0/lib/tk.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="4983" selection-start-line="4983" selection-end-line="4983" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ruby_calc.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+        <state relative-caret-position="209">
+          <caret line="173" column="21" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
         </state>
       </provider>
     </entry>
