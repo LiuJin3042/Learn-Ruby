@@ -47,12 +47,21 @@ tmp_label = TkLabel.new(root){
 # the method 'command' doesn't support function with parameters
 # so have to write the parameter to string and execute it
 update = "
+if $history != ''
+  $history = ''
+end
 $tmp_input += input_num
 cmd_label.configure('text'=>$commands)
 tmp_label.configure('text'=>$tmp_input)
 "
 # reset the tmp input label
 reset = "
+# to let user operate directly to last ans
+# i put the ans into $history
+if $history != ''
+  $commands += $history
+  $history = ''
+end
 $commands += $tmp_input
 $commands += input_sym
 $tmp_input = ''
