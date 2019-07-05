@@ -62,11 +62,14 @@ if $history != ''
   $commands += $history
   $history = ''
 end
+symbols = '+-*/'
 $commands += $tmp_input
-$commands += input_sym
-$tmp_input = ''
-cmd_label.configure('text'=>$commands)
-tmp_label.configure('text'=>$tmp_input)
+if $commands == '' or (not symbols.include?($commands[-1]))
+  $commands += input_sym
+  $tmp_input = ''
+  cmd_label.configure('text'=>$commands)
+  tmp_label.configure('text'=>$tmp_input)
+end
 "
 
 # valuate commandso
@@ -172,28 +175,47 @@ TkButton.new(root) do
 end
 
 TkButton.new(root) do
+  input_sym = '-'
+  text input_sym
+  pack :side=>'top', :fill=>'both'
+  command{
+    eval(reset)
+  }
+end
+
+TkButton.new(root) do
+  input_sym = '*'
+  text input_sym
+  pack :side=>'top', :fill=>'both'
+  command{
+    eval(reset)
+  }
+end
+
+TkButton.new(root) do
+  input_sym = '/'
+  text input_sym
+  pack :side=>'top', :fill=>'both'
+  command{
+    eval(reset)
+  }
+end
+
+TkButton.new(root) do
   get_ans = '='
   text get_ans
   pack :side=>'top', :fill=>'both'
   command{
-    begin
-      $commands += $tmp_input
-      ans = eval($commands).to_s
-      $history = ans
-      $commands = ''
-      $tmp_input = ''
-      # clear cmd label while saving the commands value to be
-      # called next time
-      cmd_label.configure('text'=>'')
-      tmp_label.configure('text'=>ans)
-    rescue => ex
-      $commands = ''
-      $tmp_input = ''
-      msg = ex.message
-      cmd_label.configure('text'=>'')
-      tmp_label.configure('text'=>msg)
-    end
-    }
+    $commands += $tmp_input
+    ans = eval($commands).to_s
+    $history = ans
+    $commands = ''
+    $tmp_input = ''
+    # clear cmd label while saving the commands value to be
+    # called next time
+    cmd_label.configure('text'=>'')
+    tmp_label.configure('text'=>ans)
+  }
 end
 
 TkButton.new(root) do
@@ -213,6 +235,7 @@ TkButton.new(root) do
   command{
     $tmp_input = ''
     $commands = ''
+    $history = ''
     tmp_label.configure('text'=>$tmp_input)
     cmd_label.configure('text'=>$commands)
   }
