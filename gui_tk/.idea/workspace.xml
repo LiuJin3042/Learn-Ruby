@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9251ac78-8c47-4216-9f64-7c02e063ebfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/call_calc.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/use_tk.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pt2_ch11_block/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pt2_ch10_exception/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pt2_ch10_exception/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pt2_ch11_block/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pt2_ch11_block/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../love_yae_sakura/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../love_yae_sakura/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stupid learn ruby/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stupid learn ruby/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TkHelloWorld.rb">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -33,6 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/call_calc.rb">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state>
               <caret selection-end-line="1" />
             </state>
@@ -62,6 +61,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
               <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+=======
+            <state relative-caret-position="19">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
             </state>
           </provider>
         </entry>
@@ -75,18 +78,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>=</find>
-      <find>=  =</find>
-      <find>=&gt;</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>=</replace>
-      <replace>==</replace>
-      <replace>=&gt;</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -95,16 +86,31 @@
       <list>
         <option value="$PROJECT_DIR$/use_tk.rb" />
         <option value="$PROJECT_DIR$/call_calc.rb" />
-        <option value="$PROJECT_DIR$/super.rb" />
-        <option value="$PROJECT_DIR$/test.rb" />
-        <option value="$PROJECT_DIR$/ruby_calc.rb" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="951" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
+=======
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/gui_tk.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="-35" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -112,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +129,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,8 +137,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -146,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Ruby.ruby_calc">
+  <component name="RunManager" selected="Ruby.TkHelloWorld">
     <configuration name="TkHelloWorld" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="gui_tk" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -175,40 +179,10 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
-    <configuration name="ruby_calc" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="gui_tk" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/ruby_calc.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="gui_tk" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/test.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Ruby.ruby_calc" />
-        <item itemvalue="Ruby.test" />
-        <item itemvalue="Ruby.call_calc" />
         <item itemvalue="Ruby.TkHelloWorld" />
+        <item itemvalue="Ruby.call_calc" />
       </list>
     </recent_temporary>
   </component>
@@ -224,12 +198,17 @@
       <option name="presentableId" value="Default" />
       <updated>1560651556214</updated>
       <workItem from="1560651557300" duration="2103000" />
+<<<<<<< HEAD
       <workItem from="1562234938360" duration="13023000" />
       <workItem from="1562337289898" duration="1818000" />
+=======
+      <workItem from="1561980232575" duration="614000" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="16944000" />
   </component>
   <component name="ToolWindowManager">
@@ -237,11 +216,24 @@
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28314918" />
+=======
+    <option name="totallyTimeSpent" value="2717000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22855228" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32761088" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -249,7 +241,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32808024" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -262,9 +254,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gui_tk@call_calc.rcov" NAME="call_calc Coverage Results" MODIFIED="1560653676943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/gui_tk@test.rcov" NAME="test Coverage Results" MODIFIED="1562246432494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
     <SUITE FILE_PATH="coverage/gui_tk@TkHelloWorld.rcov" NAME="TkHelloWorld Coverage Results" MODIFIED="1560652099548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
     <SUITE FILE_PATH="coverage/gui_tk@ruby_calc.rcov" NAME="ruby_calc Coverage Results" MODIFIED="1562339130050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
+=======
+    <SUITE FILE_PATH="coverage/gui_tk@TkHelloWorld.rcov" NAME="TkHelloWorld Coverage Results" MODIFIED="1561980247148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gui_tk" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/use_tk.rb">
@@ -274,11 +270,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TkHelloWorld.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/call_calc.rb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret selection-end-line="1" />
         </state>
@@ -311,6 +305,15 @@
           <caret line="173" column="21" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
         </state>
       </provider>
+=======
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TkHelloWorld.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> ae2e917a72453b99181bb4774e5b91e77b7174ef
     </entry>
   </component>
 </project>
