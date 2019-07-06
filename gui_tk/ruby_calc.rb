@@ -81,7 +81,7 @@ valuate = "
 TkButton.new(root){
   input_num = '1'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  pack :side=>'left'
   command{
     eval(update)
   }
@@ -90,7 +90,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '2'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  pack :side=>'left'
   command{
     eval(update)
   }
@@ -194,8 +194,17 @@ TkButton.new(root) do
 end
 
 TkButton.new(root) do
+  input_sym = '*1.0/'
+  text '/'
+  pack :side=>'top', :fill=>'both'
+  command{
+    eval(reset)
+  }
+end
+
+TkButton.new(root) do
   input_sym = '/'
-  text input_sym
+  text '//'
   pack :side=>'top', :fill=>'both'
   command{
     eval(reset)
@@ -208,20 +217,28 @@ TkButton.new(root) do
   pack :side=>'top', :fill=>'both'
   command{
     # add last input into commands
-    $commands += $tmp_input
-    if $symbols.include?($commands[-1])
-      $commands.chop!
+    begin
+      $commands += $tmp_input
+      if $symbols.include?($commands[-1])
+        $commands.chop!
+      end
+      # eval commands and convert to string
+      ans = eval($commands).to_s
+      # save ans to history for further use and clear commands
+      $history = ans
+      $commands = ''
+      $tmp_input = ''
+      # clear cmd label while saving the commands value to be
+      # called next time
+      cmd_label.configure('text'=>'')
+      tmp_label.configure('text'=>ans)
+    rescue => err
+      $commands = ''
+      $history = ''
+      $tmp_input = ''
+      cmd_label.configure('text'=>'')
+      tmp_label.configure('text'=>err.message)
     end
-    # eval commands and convert to string
-    ans = eval($commands).to_s
-    # save ans to history for further use and clear commands
-    $history = ans
-    $commands = ''
-    $tmp_input = ''
-    # clear cmd label while saving the commands value to be
-    # called next time
-    cmd_label.configure('text'=>'')
-    tmp_label.configure('text'=>ans)
   }
 end
 
