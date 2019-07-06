@@ -28,6 +28,8 @@ $tmp_input = ''
 # store histories
 $history = ''
 
+# symbols used
+$symbols = '+-*/'
 # commands label
 cmd_label = TkLabel.new(root){
   text $commands
@@ -62,9 +64,8 @@ if $history != ''
   $commands += $history
   $history = ''
 end
-symbols = '+-*/'
 $commands += $tmp_input
-if $commands == '' or (not symbols.include?($commands[-1]))
+if $commands == '' or (not $symbols.include?($commands[-1]))
   $commands += input_sym
   $tmp_input = ''
   cmd_label.configure('text'=>$commands)
@@ -206,8 +207,14 @@ TkButton.new(root) do
   text get_ans
   pack :side=>'top', :fill=>'both'
   command{
+    # add last input into commands
     $commands += $tmp_input
+    if $symbols.include?($commands[-1])
+      $commands.chop!
+    end
+    # eval commands and convert to string
     ans = eval($commands).to_s
+    # save ans to history for further use and clear commands
     $history = ans
     $commands = ''
     $tmp_input = ''
