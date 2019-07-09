@@ -33,13 +33,13 @@ $symbols = '+-*/'
 # commands label
 cmd_label = TkLabel.new(root){
   text $commands
-  pack :side=>'top', :fill=>'both'
+  grid :column=>0, :row=>0, :columnspan=>4
 }
 
 # tmp input label
 tmp_label = TkLabel.new(root){
   text $tmp_input
-  pack :side=>'top', :fill=>'both'
+  grid :column=>0, :row=>1, :columnspan=>4
 }
 
 # update label by eval(update)
@@ -81,7 +81,7 @@ valuate = "
 TkButton.new(root){
   input_num = '1'
   text input_num
-  pack :side=>'left'
+  grid :column=>0, :row=>6
   command{
     eval(update)
   }
@@ -90,7 +90,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '2'
   text input_num
-  pack :side=>'left'
+  grid :column=>1, :row=>6
   command{
     eval(update)
   }
@@ -98,7 +98,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '3'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>2, :row=>6
   command{
     eval(update)
   }
@@ -107,7 +107,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '4'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>0, :row=>5
   command{
     eval(update)
   }
@@ -116,7 +116,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '5'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>1, :row=>5
   command{
     eval(update)
   }
@@ -125,7 +125,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '6'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>2, :row=>5
   command{
     eval(update)
   }
@@ -134,7 +134,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '7'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>0, :row=>4
   command{
     eval(update)
   }
@@ -143,7 +143,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '8'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>1, :row=>4
   command{
     eval(update)
   }
@@ -152,7 +152,7 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '9'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>2, :row=>4
   command{
     eval(update)
   }
@@ -161,15 +161,16 @@ TkButton.new(root){
 TkButton.new(root){
   input_num = '0'
   text input_num
-  pack :side=>'top', :fill=>'both'
+  grid :column=>1, :row=>7
   command{
     eval(update)
   }
 }
+
 TkButton.new(root) do
   input_sym = '+'
   text input_sym
-  pack :side=>'top', :fill=>'both'
+  grid :column=>3, :row=>6
   command{
     eval(reset)
   }
@@ -178,7 +179,7 @@ end
 TkButton.new(root) do
   input_sym = '-'
   text input_sym
-  pack :side=>'top', :fill=>'both'
+  grid :column=>3, :row=>5
   command{
     eval(reset)
   }
@@ -187,7 +188,7 @@ end
 TkButton.new(root) do
   input_sym = '*'
   text input_sym
-  pack :side=>'top', :fill=>'both'
+  grid :column=>3, :row=>4
   command{
     eval(reset)
   }
@@ -196,7 +197,7 @@ end
 TkButton.new(root) do
   input_sym = '*1.0/'
   text '/'
-  pack :side=>'top', :fill=>'both'
+  grid :column=>3, :row=>3
   command{
     eval(reset)
   }
@@ -205,7 +206,7 @@ end
 TkButton.new(root) do
   input_sym = '/'
   text '//'
-  pack :side=>'top', :fill=>'both'
+  grid :column=>0, :row=>2
   command{
     eval(reset)
   }
@@ -214,7 +215,7 @@ end
 TkButton.new(root) do
   get_ans = '='
   text get_ans
-  pack :side=>'top', :fill=>'both'
+  grid :column=>3, :row=>7
   command{
     # add last input into commands
     begin
@@ -245,7 +246,7 @@ end
 TkButton.new(root) do
   tmp_clear = 'CE'
   text tmp_clear
-  pack :side=>'top', :fill=>'both'
+  grid :column=>0, :row=>3
   command{
     $tmp_input = ''
     tmp_label.configure('text'=>$tmp_input)
@@ -255,7 +256,7 @@ end
 TkButton.new(root) do
   all_clear = 'C'
   text all_clear
-  pack :side=>'top', :fill=>'both'
+  grid :column=>1, :row=>3
   command{
     $tmp_input = ''
     $commands = ''
