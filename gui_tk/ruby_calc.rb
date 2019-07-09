@@ -10,7 +10,7 @@ require 'tk'
 msg = "CALCULATOR"
 root = TkRoot.new {
   title msg
-  minsize(500,500)
+  minsize(300,300)
 }
 
 # row number
@@ -26,15 +26,29 @@ $commands = ''
 $tmp_input = ''
 
 # store histories
-$history = ''
+$buffer = ''
 
 # symbols used
 $symbols = '+-*/.'
 
 # commands label
 cmd_label = TkLabel.new(root, :text=>$commands).grid(:column=>0, :row=>0, :columnspan=>4)
+cmd_label.configure(
+    :font=>'arial 10',
+    :width=>20,
+    :height=>1,
+    # se for south-east, that is right alignment
+    :anchor=>'se'
+)
 # tmp input label
-tmp_label = TkLabel.new(root, :text=>$tmp_input).grid(:column=>0, :row=>1, :columnspan=>4)
+tmp_label = TkLabel.new(root, :text=>$tmp_input, :justify=>'left').grid(:column=>0, :row=>1, :columnspan=>4)
+tmp_label.configure(
+    :font=>'arial 20 bold',
+    :width=>18,
+    :height=>1,
+    :anchor=>'se'
+#    :anchor=>'e'
+)
 
 # some orders to be executed by number buttons
 # update label by eval(update)
@@ -44,22 +58,26 @@ tmp_label = TkLabel.new(root, :text=>$tmp_input).grid(:column=>0, :row=>1, :colu
 # the method 'command' doesn't support function with parameters
 # so have to write the parameter to string and execute it
 update = "
-if $history != ''
-  $history = ''
+if $buffer != ''
+  $buffer = ''
 end
-$tmp_input += input_num
-cmd_label.configure('text'=>$commands)
-tmp_label.configure('text'=>$tmp_input)
+# tmp_input cannot be too long
+if $tmp_input.length < 20
+  $tmp_input += input_num
+  cmd_label.configure('text'=>$commands)
+  tmp_label.configure('text'=>$tmp_input)
+end
 "
 # reset the tmp input label
 reset = "
 # to let user operate directly to last ans
-# i put the ans into $history
-if $history != ''
-  $commands += $history
-  $history = ''
+# i put the ans into $buffer
+if $buffer != ''
+  $commands += $buffer
+  $buffer = ''
 end
 $commands += $tmp_input
+# need to exclude the situation when $commands is empty of ends with symbols(+-*/.)
 if $commands == '' or (not $symbols.include?($commands[-1]))
   $commands += input_sym
   $tmp_input = ''
@@ -68,26 +86,37 @@ if $commands == '' or (not $symbols.include?($commands[-1]))
 end
 "
 
+grid_format = "
+width 4
+height 1
+font \"arial 20 bold\"
+"
+
 creat_button = "
 $num_%d = TkButton.new(root){
   input_num = %d.to_s
   text input_num
-  grid :column=>(%d-1)%%3, :row=>6-(%d-1)/3, :padx=>8, :pady=>8, :sticky=>'nsew'
+  grid :column=>(%d-1)%%3, :row=>6-(%d-1)/3
+  eval(grid_format)
   font \"arial 20 bold\"
   command{
     eval(update)
   }
 }
 "
+
 (0..9).each do |i|
   cmd = format(creat_button,i, i, i, i)
   eval(cmd)
 end
 
+
+
 TkButton.new(root) do
   input_sym = '+'
   text input_sym
   grid :column=>3, :row=>6
+  eval(grid_format)
   command{
     eval(reset)
   }
@@ -97,6 +126,7 @@ TkButton.new(root) do
   input_sym = '-'
   text input_sym
   grid :column=>3, :row=>5
+  eval(grid_format)
   command{
     eval(reset)
   }
@@ -106,6 +136,7 @@ TkButton.new(root) do
   input_sym = '*'
   text input_sym
   grid :column=>3, :row=>4
+  eval(grid_format)
   command{
     eval(reset)
   }
@@ -115,6 +146,7 @@ TkButton.new(root) do
   input_sym = '*1.0/'
   text '/'
   grid :column=>3, :row=>3
+  eval(grid_format)
   command{
     eval(reset)
   }
@@ -124,6 +156,7 @@ TkButton.new(root) do
   input_sym = '/'
   text '//'
   grid :column=>0, :row=>2
+  eval(grid_format)
   command{
     eval(reset)
   }
@@ -132,10 +165,11 @@ end
 TkButton.new(root) do
   text '+/-'
   grid :column=>0, :row=>7
+  eval(grid_format)
   command{
     if $tmp_input == ''
-      $tmp_input = $history
-      $history = ''
+      $tmp_input = $buffer
+      $buffer = ''
     end
     $tmp_input = (eval($tmp_input) * (-1)).to_s
     tmp_label.configure(:text=>$tmp_input)
@@ -146,6 +180,7 @@ TkButton.new(root) do
   input_sym = '.'
   text input_sym
   grid :column=>1, :row=>7
+  eval(grid_format)
   command{
     if $tmp_input == ''
       $tmp_input = '0'
@@ -159,10 +194,11 @@ TkButton.new(root) do
   input_sym = '¡Ì'
   text input_sym
   grid :column=>1, :row=>2
+  eval(grid_format)
   command{
     if $tmp_input == ''
-      $tmp_input = $history
-      $history = ''
+      $tmp_input = $buffer
+      $buffer = ''
     end
     $tmp_input = Math.sqrt( ($tmp_input) ).to_s
     tmp_label.configure(:text=>$tmp_input)
@@ -173,10 +209,11 @@ TkButton.new(root) do
   input_sym = '^2'
   text input_sym
   grid :column=>2, :row=>2
+  eval(grid_format)
   command{
     if $tmp_input == ''
-      $tmp_input = $history
-      $history = ''
+      $tmp_input = $buffer
+      $buffer = ''
     end
     $tmp_input = (eval($tmp_input) ** 2).to_s
     tmp_label.configure(:text=>$tmp_input)
@@ -187,10 +224,11 @@ TkButton.new(root) do
   input_sym = '1/x'
   text input_sym
   grid :column=>3, :row=>2
+  eval(grid_format)
   command{
     if $tmp_input == ''
-      $tmp_input = $history
-      $history = ''
+      $tmp_input = $buffer
+      $buffer = ''
     end
     $tmp_input = (1.0/eval($tmp_input)).to_s
     tmp_label.configure(:text=>$tmp_input)
@@ -201,6 +239,7 @@ TkButton.new(root) do
   get_ans = '='
   text get_ans
   grid :column=>3, :row=>7
+  eval(grid_format)
   command{
     # add last input into commands
     begin
@@ -210,8 +249,8 @@ TkButton.new(root) do
       end
       # eval commands and convert to string
       ans = eval($commands).to_s
-      # save ans to history for further use and clear commands
-      $history = ans
+      # save ans to buffer for further use and clear commands
+      $buffer = ans
       $commands = ''
       $tmp_input = ''
       # clear cmd label while saving the commands value to be
@@ -220,7 +259,7 @@ TkButton.new(root) do
       tmp_label.configure('text'=>ans)
     rescue => err
       $commands = ''
-      $history = ''
+      $buffer = ''
       $tmp_input = ''
       cmd_label.configure('text'=>'')
       tmp_label.configure('text'=>err.message)
@@ -232,6 +271,7 @@ TkButton.new(root) do
   tmp_clear = 'CE'
   text tmp_clear
   grid :column=>0, :row=>3
+  eval(grid_format)
   command{
     $tmp_input = ''
     tmp_label.configure('text'=>$tmp_input)
@@ -242,13 +282,28 @@ TkButton.new(root) do
   all_clear = 'C'
   text all_clear
   grid :column=>1, :row=>3
+  eval(grid_format)
   command{
     $tmp_input = ''
     $commands = ''
-    $history = ''
+    $buffer = ''
     tmp_label.configure('text'=>$tmp_input)
     cmd_label.configure('text'=>$commands)
   }
 end
+
+TkButton.new(root) do
+  back_space = 'DEL'
+  text back_space
+  grid :column=>2, :row=>3
+  eval(grid_format)
+  command{
+    if $tmp_input != ''
+      $tmp_input.chop!
+      tmp_label.configure(:text=>$tmp_input)
+    end
+  }
+end
+
 Tk.mainloop
 
