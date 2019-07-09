@@ -29,7 +29,7 @@ $tmp_input = ''
 $history = ''
 
 # symbols used
-$symbols = '+-*/'
+$symbols = '+-*/.'
 # commands label
 cmd_label = TkLabel.new(root){
   text $commands
@@ -209,6 +209,74 @@ TkButton.new(root) do
   grid :column=>0, :row=>2
   command{
     eval(reset)
+  }
+end
+
+TkButton.new(root) do
+  text '+/-'
+  grid :column=>0, :row=>7
+  command{
+    if $tmp_input == ''
+      $tmp_input = $history
+      $history = ''
+    end
+    $tmp_input = (eval($tmp_input) * (-1)).to_s
+    tmp_label.configure(:text=>$tmp_input)
+  }
+end
+
+TkButton.new(root) do
+  input_sym = '.'
+  text input_sym
+  grid :column=>2, :row=>7
+  command{
+    if $tmp_input == ''
+      $tmp_input = '0'
+    end
+    $tmp_input += input_sym
+    tmp_label.configure(:text=>$tmp_input)
+  }
+end
+
+TkButton.new(root) do
+  input_sym = '¡Ì'
+  text input_sym
+  grid :column=>1, :row=>2
+  command{
+    if $tmp_input == ''
+      $tmp_input = $history
+      $history = ''
+    end
+    $tmp_input = Math.sqrt( ($tmp_input) ).to_s
+    tmp_label.configure(:text=>$tmp_input)
+  }
+end
+
+TkButton.new(root) do
+  input_sym = '^2'
+  text input_sym
+  grid :column=>2, :row=>2
+  command{
+    if $tmp_input == ''
+      $tmp_input = $history
+      $history = ''
+    end
+    $tmp_input = (eval($tmp_input) ** 2).to_s
+    tmp_label.configure(:text=>$tmp_input)
+  }
+end
+
+TkButton.new(root) do
+  input_sym = '1/x'
+  text input_sym
+  grid :column=>3, :row=>2
+  command{
+    if $tmp_input == ''
+      $tmp_input = $history
+      $history = ''
+    end
+    $tmp_input = (1.0/eval($tmp_input)).to_s
+    tmp_label.configure(:text=>$tmp_input)
   }
 end
 
