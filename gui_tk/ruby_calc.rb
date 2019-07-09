@@ -10,7 +10,8 @@ require 'tk'
 msg = "CALCULATOR"
 root = TkRoot.new {
   title msg
-  minsize(300,300)
+  width 300
+  height 7
 }
 
 # row number
@@ -35,7 +36,7 @@ $symbols = '+-*/.'
 cmd_label = TkLabel.new(root, :text=>$commands).grid(:column=>0, :row=>0, :columnspan=>4)
 cmd_label.configure(
     :font=>'arial 10',
-    :width=>20,
+    :width=>38,
     :height=>1,
     # se for south-east, that is right alignment
     :anchor=>'se'
@@ -153,6 +154,7 @@ TkButton.new(root) do
 end
 
 TkButton.new(root) do
+  # if inputs are all integers then perform integer division
   input_sym = '/'
   text '//'
   grid :column=>0, :row=>2
@@ -200,7 +202,7 @@ TkButton.new(root) do
       $tmp_input = $buffer
       $buffer = ''
     end
-    $tmp_input = Math.sqrt( ($tmp_input) ).to_s
+    $tmp_input = Math.sqrt( ($tmp_input.to_f) ).to_s
     tmp_label.configure(:text=>$tmp_input)
   }
 end
