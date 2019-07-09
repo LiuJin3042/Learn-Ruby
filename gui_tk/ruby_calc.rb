@@ -40,7 +40,7 @@ cmd_label.configure(
     :font=>'arial 10',
     :width=>38,
     :height=>1,
-    # se for south-east, that is right alignment
+    # se for south-east, that is, right alignment
     :anchor=>'se'
 )
 # tmp input label
@@ -50,7 +50,6 @@ tmp_label.configure(
     :width=>18,
     :height=>1,
     :anchor=>'se'
-#    :anchor=>'e'
 )
 
 # some orders to be executed by number buttons
@@ -171,9 +170,6 @@ TkButton.new(root) do
   grid :column=>0, :row=>7
   eval(grid_format)
   command{
-    if $buffer == ''
-      $buffer = '0'
-    end
     if $tmp_input == ''
       $tmp_input = $buffer
       $buffer = ''
@@ -203,9 +199,6 @@ TkButton.new(root) do
   grid :column=>1, :row=>2
   eval(grid_format)
   command{
-    if $buffer == ''
-      $buffer == '0'
-    end
     if $tmp_input == ''
       $tmp_input = $buffer
       $buffer = ''
@@ -255,8 +248,9 @@ TkButton.new(root) do
     begin
       # add last input
       $commands += $tmp_input
+      # if commands is still empty, make it zero
       if $commands == ''
-        $commands == '0'
+        $commands = '0'
       end
       # if last input is a symbol, delete last input
       if $symbols.include?($commands[-1])
@@ -316,7 +310,7 @@ TkButton.new(root) do
   command{
     if $tmp_input != ''
       $tmp_input.chop!
-      tmp_label.configure(:text=>$tmp_input)
+      tmp_label.configure('texr'=>$tmp_input)
     end
   }
 end
