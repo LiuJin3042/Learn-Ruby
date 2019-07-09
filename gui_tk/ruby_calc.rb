@@ -10,8 +10,10 @@ require 'tk'
 msg = "CALCULATOR"
 root = TkRoot.new {
   title msg
-  width 300
-  height 7
+  width = 391
+  length = 311
+  minsize(length, width)
+  maxsize(length, width)
 }
 
 # row number
@@ -169,6 +171,9 @@ TkButton.new(root) do
   grid :column=>0, :row=>7
   eval(grid_format)
   command{
+    if $buffer == ''
+      $buffer = '0'
+    end
     if $tmp_input == ''
       $tmp_input = $buffer
       $buffer = ''
@@ -198,6 +203,9 @@ TkButton.new(root) do
   grid :column=>1, :row=>2
   eval(grid_format)
   command{
+    if $buffer == ''
+      $buffer == '0'
+    end
     if $tmp_input == ''
       $tmp_input = $buffer
       $buffer = ''
@@ -245,7 +253,12 @@ TkButton.new(root) do
   command{
     # add last input into commands
     begin
+      # add last input
       $commands += $tmp_input
+      if $commands == ''
+        $commands == '0'
+      end
+      # if last input is a symbol, delete last input
       if $symbols.include?($commands[-1])
         $commands.chop!
       end
@@ -253,6 +266,7 @@ TkButton.new(root) do
       ans = eval($commands).to_s
       # save ans to buffer for further use and clear commands
       $buffer = ans
+      # clear commands
       $commands = ''
       $tmp_input = ''
       # clear cmd label while saving the commands value to be
