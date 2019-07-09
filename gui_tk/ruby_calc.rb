@@ -30,18 +30,13 @@ $history = ''
 
 # symbols used
 $symbols = '+-*/.'
+
 # commands label
-cmd_label = TkLabel.new(root){
-  text $commands
-  grid :column=>0, :row=>0, :columnspan=>4
-}
-
+cmd_label = TkLabel.new(root, :text=>$commands).grid(:column=>0, :row=>0, :columnspan=>4)
 # tmp input label
-tmp_label = TkLabel.new(root){
-  text $tmp_input
-  grid :column=>0, :row=>1, :columnspan=>4
-}
+tmp_label = TkLabel.new(root, :text=>$tmp_input).grid(:column=>0, :row=>1, :columnspan=>4)
 
+# some orders to be executed by number buttons
 # update label by eval(update)
 # it took me great pain to discover this method to
 # change the label dynamically
@@ -73,99 +68,21 @@ if $commands == '' or (not $symbols.include?($commands[-1]))
 end
 "
 
-# valuate commandso
-valuate = "
-
+creat_button = "
+$num_%d = TkButton.new(root){
+  input_num = %d.to_s
+  text input_num
+  grid :column=>(%d-1)%%3, :row=>6-(%d-1)/3, :padx=>8, :pady=>8, :sticky=>'nsew'
+  font \"arial 20 bold\"
+  command{
+    eval(update)
+  }
+}
 "
-
-TkButton.new(root){
-  input_num = '1'
-  text input_num
-  grid :column=>0, :row=>6
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '2'
-  text input_num
-  grid :column=>1, :row=>6
-  command{
-    eval(update)
-  }
-}
-TkButton.new(root){
-  input_num = '3'
-  text input_num
-  grid :column=>2, :row=>6
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '4'
-  text input_num
-  grid :column=>0, :row=>5
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '5'
-  text input_num
-  grid :column=>1, :row=>5
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '6'
-  text input_num
-  grid :column=>2, :row=>5
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '7'
-  text input_num
-  grid :column=>0, :row=>4
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '8'
-  text input_num
-  grid :column=>1, :row=>4
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '9'
-  text input_num
-  grid :column=>2, :row=>4
-  command{
-    eval(update)
-  }
-}
-
-TkButton.new(root){
-  input_num = '0'
-  text input_num
-  grid :column=>1, :row=>7
-  command{
-    eval(update)
-  }
-}
+(0..9).each do |i|
+  cmd = format(creat_button,i, i, i, i)
+  eval(cmd)
+end
 
 TkButton.new(root) do
   input_sym = '+'
@@ -228,7 +145,7 @@ end
 TkButton.new(root) do
   input_sym = '.'
   text input_sym
-  grid :column=>2, :row=>7
+  grid :column=>1, :row=>7
   command{
     if $tmp_input == ''
       $tmp_input = '0'
