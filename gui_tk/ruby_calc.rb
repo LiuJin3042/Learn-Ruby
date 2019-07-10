@@ -311,7 +311,7 @@ TkButton.new(root) do
   command{
     if $tmp_input != ''
       $tmp_input.chop!
-      tmp_label.configure('texr'=>$tmp_input)
+      tmp_label.configure('text'=>$tmp_input)
     end
   }
 end
