@@ -1,6 +1,9 @@
 main function: ruby_calc.rb
+
 a simpler way to creat calculators: call_calc.rb
+
 reference: folder 'homework of ...'
+
 test files: folder 'temp files ...' 
 
 This is a calcutor wirtten in ruby with the help of tk. and it's also
