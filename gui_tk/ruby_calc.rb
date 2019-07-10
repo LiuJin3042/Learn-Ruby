@@ -14,6 +14,7 @@ root = TkRoot.new {
   length = 311
   minsize(length, width)
   maxsize(length, width)
+  iconbitmap './ico/calc_ico_32pix.ico'
 }
 
 # row number
