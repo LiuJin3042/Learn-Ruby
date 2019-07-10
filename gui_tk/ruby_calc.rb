@@ -93,6 +93,7 @@ grid_format = "
 width 4
 height 1
 font \"arial 20 bold\"
+background '#DDDDDD'
 "
 
 creat_button = "
@@ -101,7 +102,6 @@ $num_%d = TkButton.new(root){
   text input_num
   grid :column=>(%d-1)%%3, :row=>6-(%d-1)/3
   eval(grid_format)
-  font \"arial 20 bold\"
   command{
     eval(update)
   }
@@ -189,8 +189,10 @@ TkButton.new(root) do
     if $tmp_input == ''
       $tmp_input = '0'
     end
-    $tmp_input += input_sym
-    tmp_label.configure(:text=>$tmp_input)
+    if not $tmp_input.include?(input_sym)
+      $tmp_input += input_sym
+      tmp_label.configure(:text=>$tmp_input)
+    end
   }
 end
 
