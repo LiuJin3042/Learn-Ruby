@@ -27,7 +27,7 @@ ncol = 4
 $commands = ''
 
 # store present input, such as numbers
-$tmp_input = ''
+$tmp_input = '0'
 
 # store histories
 $buffer = ''
@@ -64,6 +64,9 @@ update = "
 if $buffer != ''
   $buffer = ''
 end
+if $tmp_input == '0'
+  $tmp_input = ''
+end
 # tmp_input cannot be too long
 if $tmp_input.length < 20
   $tmp_input += input_num
@@ -80,8 +83,8 @@ if $buffer != ''
   $buffer = ''
 end
 $commands += $tmp_input
-# need to exclude the situation when $commands is empty of ends with symbols(+-*/.)
-if $commands == '' or (not $symbols.include?($commands[-1]))
+# need to exclude the situation when $commands is empty or ends with symbols(+-*/.)
+if $commands != '' or (not $symbols.include?($commands[-1]))
   $commands += input_sym
   $tmp_input = ''
   cmd_label.configure('text'=>$commands)
@@ -251,6 +254,13 @@ TkButton.new(root) do
     begin
       # add last input
       $commands += $tmp_input
+      # easter egg! happy birthday yae sakura
+      if $commands == '*0722*'
+        img = TkPhotoImage.new('file'=>'./yae_sakura/happy_birthday.gif')
+        top_window = TkToplevel.new(root)
+        TkLabel.new(top_window, 'image'=>img).grid('column'=>0, 'row'=>0)
+        $commands = '0'
+      end
       # if commands is still empty, make it zero
       if $commands == ''
         $commands = '0'
@@ -286,7 +296,7 @@ TkButton.new(root) do
   grid :column=>0, :row=>3
   eval(grid_format)
   command{
-    $tmp_input = ''
+    $tmp_input = '0'
     tmp_label.configure('text'=>$tmp_input)
   }
 end
@@ -297,7 +307,7 @@ TkButton.new(root) do
   grid :column=>1, :row=>3
   eval(grid_format)
   command{
-    $tmp_input = ''
+    $tmp_input = '0'
     $commands = ''
     $buffer = ''
     tmp_label.configure('text'=>$tmp_input)
