@@ -255,7 +255,7 @@ TkButton.new(root) do
       # add last input
       $commands += $tmp_input
       # easter egg! happy birthday yae sakura
-      if $commands == '*0722*'
+      if $commands == '0*722*'
         img = TkPhotoImage.new('file'=>'./yae_sakura/happy_birthday.gif')
         top_window = TkToplevel.new(root)
         TkLabel.new(top_window, 'image'=>img).grid('column'=>0, 'row'=>0)
