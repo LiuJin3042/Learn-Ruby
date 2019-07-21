@@ -259,6 +259,7 @@ TkButton.new(root) do
         img = TkPhotoImage.new('file'=>'./yae_sakura/happy_birthday.gif')
         top_window = TkToplevel.new(root)
         TkLabel.new(top_window, 'image'=>img).grid('column'=>0, 'row'=>0)
+        TkLabel.new(top_window, 'text'=>'LOVE YOU FOREVER').grid('column'=>0, 'row'=>1)
         $commands = '0'
       end
       # if commands is still empty, make it zero
